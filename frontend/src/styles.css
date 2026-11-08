@@ -1,0 +1,316 @@
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #172b4d;
+  background: #f3f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 85% 0%, rgba(181, 220, 247, 0.42), transparent 34rem),
+    #f3f7fb;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+select,
+input {
+  outline-offset: 3px;
+}
+
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 3px solid #78b9ee;
+}
+
+.app-container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 38px 0 64px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.eyebrow {
+  margin: 0 0 7px;
+  color: #3974a8;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #12355b;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.mock-selector {
+  display: grid;
+  gap: 6px;
+  min-width: 230px;
+}
+
+.mock-selector label,
+.filter-field label {
+  color: #40566f;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.mock-selector select,
+.filter-field input,
+.filter-field select {
+  min-height: 44px;
+  width: 100%;
+  padding: 9px 12px;
+  color: #172b4d;
+  background: #fff;
+  border: 1px solid #cbd7e3;
+  border-radius: 9px;
+}
+
+.filters-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e0e8f0;
+  border-radius: 16px;
+  box-shadow: 0 8px 26px rgba(27, 62, 94, 0.06);
+}
+
+.filter-field {
+  display: grid;
+  gap: 7px;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: end;
+  min-height: 44px;
+  color: #40566f;
+  font-weight: 600;
+}
+
+.checkbox-field input {
+  width: 18px;
+  height: 18px;
+  accent-color: #1d72b8;
+}
+
+.submit-btn,
+.book-btn,
+.retry-btn,
+.sort-controls button {
+  min-height: 42px;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.submit-btn {
+  align-self: end;
+  padding: 0 18px;
+  color: #fff;
+  background: #176eae;
+}
+
+.submit-btn:hover,
+.book-btn:hover,
+.retry-btn:hover {
+  background: #12588d;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.62;
+}
+
+.error-block,
+.success-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 18px;
+  padding: 14px 16px;
+  border-radius: 11px;
+}
+
+.error-block {
+  color: #842626;
+  background: #fff0ef;
+  border: 1px solid #f1c2bd;
+}
+
+.error-block p {
+  margin: 0;
+  font-weight: 650;
+}
+
+.retry-btn {
+  flex: 0 0 auto;
+  padding: 0 14px;
+  color: #fff;
+  background: #a63b34;
+}
+
+.success-banner {
+  color: #185c3a;
+  background: #e9f8ef;
+  border: 1px solid #b8e4c9;
+}
+
+.loading-indicator {
+  margin: 16px 0;
+  color: #42627e;
+  font-weight: 650;
+}
+
+.results {
+  margin-top: 24px;
+}
+
+.sort-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #40566f;
+}
+
+.sort-controls button {
+  min-height: 36px;
+  padding: 0 12px;
+  color: #214766;
+  background: #e2edf6;
+}
+
+.sort-controls button[aria-pressed="true"] {
+  color: #fff;
+  background: #397eae;
+}
+
+.talon-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.talon-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #e0e8f0;
+  border-radius: 13px;
+  box-shadow: 0 5px 18px rgba(27, 62, 94, 0.045);
+}
+
+.talon-card__main {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.talon-time {
+  color: #123f67;
+  font-size: 1.08rem;
+}
+
+.talon-meta {
+  color: #60758a;
+  font-size: 0.9rem;
+}
+
+.book-btn {
+  flex: 0 0 auto;
+  padding: 0 15px;
+  color: #fff;
+  background: #218255;
+}
+
+.no-data {
+  margin: 20px 0 0;
+  padding: 18px;
+  color: #526a80;
+  background: #fff;
+  border: 1px solid #e0e8f0;
+  border-radius: 12px;
+}
+
+@media (min-width: 760px) {
+  .filters-form {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .app-container {
+    width: min(100% - 24px, 480px);
+    padding-top: 24px;
+  }
+
+  .app-header {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .mock-selector {
+    min-width: 0;
+  }
+
+  .filters-form {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .talon-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .book-btn {
+    width: 100%;
+  }
+
+  .error-block {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

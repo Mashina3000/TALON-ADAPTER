@@ -1,0 +1,19 @@
+{
+  "name": "pinsk-registry-backend",
+  "version": "1.0.0",
+  "description": "Backend proxy for Pinsk pediatric registry",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "axios-cookiejar-support": "^5.0.3",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "tough-cookie": "^4.1.4"
+  }
+}
